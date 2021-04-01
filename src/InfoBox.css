@@ -3,11 +3,11 @@
 }
 
 .infoBox:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 .infoBox--selected {
-  border-top: 10px solid greenyellow;
+  border-left: 25px solid greenyellow;
 }
 
 .infoBox--red {
@@ -20,14 +20,22 @@
 
 .infoBox__cases {
   color: #cc1034;
-  font-weight: 600;
+  font-weight: 650;
   font-size: 1.75rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-bottom: 0.5rem;
 }
 
 .infoBox__total {
   color: #6c757d;
   font-weight: 700 !important;
-  font-size: 0.8rem !important;
+  font-size: 1 rem !important;
   margin-top: 15px !important;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (max-width: 990px) {
+  .infoBox {
+    flex-direction: column;
+  }
 }

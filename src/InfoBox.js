@@ -7,19 +7,20 @@ function InfoBox({ title, cases, total, active, isRed, ...props }) {
   return (
     <Card
       onClick={props.onClick}
+      onMouseOver= {"cursor: pointer"}
       className={`infoBox ${active && "infoBox--selected"} ${
         isRed && "infoBox--red"
       }`}
     >
       <CardContent>
-        <Typography color="textSecondary" gutterBottom>
+        <Typography variant="h6" color="textSecondary" gutterBottom>
           {title}
         </Typography>
         <h2 className={`infoBox__cases ${!isRed && "infoBox__cases--green"}`}>
           {cases}
         </h2>
 
-        <Typography className="infoBox__total" color="textSecondary">
+        <Typography className="infoBox__total" variant="h6" color="textSecondary">
           {total} Total
         </Typography>
       </CardContent>
