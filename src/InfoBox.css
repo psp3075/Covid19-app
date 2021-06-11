@@ -3,11 +3,11 @@
 }
 
 .infoBox:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 15px;
 }
 
 .infoBox--selected {
-  border-left: 25px solid greenyellow;
+  border-bottom: 10px solid greenyellow;
 }
 
 .infoBox--red {
@@ -22,7 +22,7 @@
   color: #cc1034;
   font-weight: 650;
   font-size: 1.75rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-bottom: 0.5rem;
 }
 
@@ -31,11 +31,21 @@
   font-weight: 700 !important;
   font-size: 1 rem !important;
   margin-top: 15px !important;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 @media (max-width: 990px) {
   .infoBox {
     flex-direction: column;
+    padding-bottom: 1rem;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+  .infoBox:last-child {
+    margin-right: 5px;
+  }
+
+  .infoBox:not(:last-child) {
+    margin-right: 5px;
   }
 }

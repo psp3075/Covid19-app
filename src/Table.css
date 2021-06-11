@@ -3,12 +3,14 @@
   overflow: scroll;
   color: #6a5d5d;
   background-color: white;
-  height: 400px;
+  height: 390px;
+  overflow-x: hidden;
 }
 
 .table tr {
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
 }
 
 .table td {

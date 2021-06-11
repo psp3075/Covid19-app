@@ -3,18 +3,20 @@
 }
 
 body {
-  background-color: #f5f6fa;
+  background-color: #fff;
 }
 
 .app {
   display: flex;
   justify-content: space-evenly;
-  background-color: #493323;
+  background-color: #046582;
   padding: 20px;
 }
 
 .app__dropdown {
   background-color: white;
+  border-radius: 10px;
+  margin-left: 5px;
 }
 
 .app__header {
@@ -25,9 +27,20 @@ body {
 }
 
 .app__header > h1 {
-  color: white;
-  font-size: 2rem;
-  font-family: 'Franklin Gothic Medium';
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: "Franklin Gothic Medium";
+}
+
+.app__header > a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium";
+}
+
+.app__header > a:hover {
+  text-decoration: underline;
 }
 
 .app__stats {
@@ -44,15 +57,24 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .app__information > h3:last-of-type {
   margin-top: 1rem;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 600px) {
   .app {
     flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .app__right {
+    margin-top: 15px;
+  }
+
+  .app__stats {
+    flex-direction: column;
+    margin-bottom: 20px;
   }
 }

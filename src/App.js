@@ -52,8 +52,6 @@ const App = () => {
     getCountriesData();
   }, []);
 
-  console.log(casesType);
-
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;
 
@@ -76,12 +74,17 @@ const App = () => {
       <div className="app__left">
         <div className="app__header">
           <h1>COVID-19 Tracker</h1>
+          <a
+            href="https://selfregistration.cowin.gov.in/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Register for Vaccination
+          </a>
           <FormControl className="app__dropdown">
             <Select
               variant="outlined"
               value={country}
-              onChange={onCountryChange}
-            >
+              onChange={onCountryChange}>
               <MenuItem value="worldwide">Worldwide</MenuItem>
               {countries.map((country) => (
                 <MenuItem value={country.value}>{country.name}</MenuItem>
@@ -124,9 +127,11 @@ const App = () => {
       <Card className="app__right">
         <CardContent>
           <div className="app__information">
-            <h3><strong>Live Cases by Country</strong></h3>
+            <h3>
+              <strong>Live Cases by Country</strong>
+            </h3>
             <Table countries={tableData} />
-            <h1>__________________________</h1>
+
             <h3>Worldwide new {casesType}</h3>
             <LineGraph casesType={casesType} />
           </div>
